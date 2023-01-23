@@ -29,4 +29,6 @@ Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider'
 Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\MainController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('home');
+Route::post('/success', [App\Http\Controllers\MainController::class,'successForm']);
