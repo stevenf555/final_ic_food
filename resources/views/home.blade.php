@@ -5,7 +5,7 @@
             <p style="color:white;font-family:poppins;font-weight:bold;font-size:50px">Indonesian Recipe</p>
             <p style="color:white;font-family:poppins;font-weight:550;font-size:18px;">Let's Start Cooking With Our Most Iconic Indonesian Food</p>
             <div>
-                <button style="background:linear-gradient(to right,#E42C3E,#EF7B3A);border-radius:10px;color:white;border:none;width:150px;height:50px;font-weight:bold;font-size:18px">Our Best Food</button>
+                <button style="background:linear-gradient(to right,#E42C3E,#EF7B3A);border-radius:10px;color:white;border:none;width:150px;height:50px;font-weight:bold;font-size:18px"><a href="#favorite" style="text-decoration: none;color:white">Our Best Food </a></button>
                 <button style="background:#E3243E;border-radius:10px;color:white;border:none;width:150px;height:50px;font-weight:bold;font-size:18px;margin-left:30px">Our Recipes</button>
             </div>
         </div>
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div style="background-color: #C84250;height:1350px">
-        <div class="d-flex" style="padding:70px">
+        <div class="d-flex" style="padding:70px" id="favorite">
             <p style="color:white;font-family:poppins;font-weight:600;font-size:40px">Choose Your Favorite!</p>
             <button style="background:linear-gradient(to right,#E42C3E,#EF7B3A);border-radius:10px;color:white;border:none;width:150px;height:50px;font-weight:bold;font-size:18px;margin-left:auto;order:2">See All</button>
         </div>
@@ -143,18 +143,22 @@
                 @php($count = 1)
                     @foreach($food->take(10) as $each_food)
                         @if($count == 1)
+                        <form action="/detail" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$each_food->id}}">
                             <div class="col" style="margin-left:-60px">
-                                <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background-size:cover;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{Storage::url('food/'.$each_food->image)}}');opacity:1;background-position:center;">
+                                <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background-size:cover;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{url('/images/food/'.$each_food->image)}}');opacity:1;background-position:center">
                                     <div style="border-radius:50%;background:#FFD700;height:60px;width:60px;margin-left:10px;vertical-align:middle">
                                             <p style="font-family: poppins;color:white;vertical-align:middle;font-size:40px;font-weight:bold">{{$count}}</p> 
                                         </div>
                                     <p style="font-family: poppins;color:white;font-size:30px;font-weight:bold;margin-top:5px;margin-left:50px">{{$each_food->name}}</p>
-                                    <button type="button" class="btn btn-light" style="font-family: poppins;font-weight:bold;border-radius:30px;width:150px;height:40px;margin-top:10px;margin-left:auto;order:2">View More</button>
+                                    <button type="submit" class="btn btn-light" style="font-family: poppins;font-weight:bold;border-radius:30px;width:150px;height:40px;margin-top:10px;margin-left:auto;order:2">View More</button>
                                 </div>
                             </div>
+                        </form>
                         @elseif($count == 2)
                             <div class="col mt-4" style="margin-left:-60px">
-                                <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{Storage::url('food/'.$each_food->image)}}');opacity:1;background-position:center;">
+                                <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{url('/images/food/'.$each_food->image)}}');opacity:1;background-position:center;">
                                     <div style="border-radius:50%;background:#C0C0C0;height:60px;width:60px;margin-left:10px;vertical-align:middle">
                                             <p style="font-family: poppins;color:white;vertical-align:middle;font-size:40px;font-weight:bold">{{$count}}</p> 
                                         </div>
@@ -164,7 +168,7 @@
                             </div>
                         @elseif($count == 3)
                             <div class="col mt-4" style="margin-left:-60px">
-                            <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{Storage::url('food/'.$each_food->image)}}');opacity:1;background-position:center;">
+                            <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{url('/images/food/'.$each_food->image)}}');opacity:1;background-position:center;">
                                     <div style="border-radius:50%;background:#FF8812;height:60px;width:60px;margin-left:10px;vertical-align:middle">
                                             <p style="font-family: poppins;color:white;vertical-align:middle;font-size:40px;font-weight:bold">{{$count}}</p> 
                                         </div>
@@ -174,7 +178,7 @@
                             </div>
                         @else
                             <div class="col mt-4" style="margin-left:-60px">
-                                <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{Storage::url('food/'.$each_food->image)}}');opacity:1;background-position:center;">
+                                <div class="d-flex p-2" style="border-radius:10px;width:880px;margin-left:60px;background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url('{{url('/images/food/'.$each_food->image)}}');opacity:1;background-position:center;">
                                     <div style="border-radius:50%;height:60px;width:60px;margin-left:10px;vertical-align:middle">
                                             <p style="font-family: poppins;color:white;vertical-align:middle;font-size:40px;font-weight:bold">{{$count}}</p> 
                                         </div>

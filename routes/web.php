@@ -32,3 +32,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\MainController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('home');
 Route::post('/success', [App\Http\Controllers\MainController::class,'successForm']);
+Route::post('/detail', [App\Http\Controllers\MainController::class,'detailCard']);

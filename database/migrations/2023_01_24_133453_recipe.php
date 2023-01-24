@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FoodMappingRecipe extends Migration
+class Recipe extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class FoodMappingRecipe extends Migration
      */
     public function up()
     {
-        Schema::create('food_mapping_recipe', function (Blueprint $table) {
-            $table->integer('foodId');
-            $table->integer('recipeId');
+        Schema::create('recipe', function (Blueprint $table) {
+            $table->id();
+            $table->longText('description');
         });
     }
 
