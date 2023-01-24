@@ -1,5 +1,5 @@
 <x-template>
-    <div style="height:1000px;background-size: cover;background-image:url('{{Storage::url($image)}}')">
+    <div style="height:1000px;background-size: cover;background-image:url('{{url('/images/background.png')}}')">
         <div style="float: right;margin-top:auto;margin-bottom:auto;margin-right:180px;margin-top:300px">
             <p style="color:white;font-family:poppins;font-weight:bold;font-size:50px">Explore Our</p>
             <p style="color:white;font-family:poppins;font-weight:bold;font-size:50px">Indonesian Recipe</p>
@@ -18,10 +18,10 @@
         </div>
         <p style="font-family:poppins;font-size:40px;text-align:center;color:#EF7B3A;font-weight:bold;margin-top:20px">Powered <span style="color:#303030">by</span></p>
         <div style="margin-top:30px">
-            <img src="{{Storage::url('logo/masterchef.png')}}" style="width:250px;height:150px;margin-left:50px">
-            <img src="{{Storage::url('logo/yellowfit.png')}}" style="width:250px;height:150px;margin-left:100px">
-            <img src="{{Storage::url('logo/royco.png')}}" style="width:170px;height:150px;margin-left:100px">
-            <img src="{{Storage::url('logo/mangkokku.png')}}" style="width:200px;height:150px;margin-left:100px">
+            <img src="{{url('/images/logo/masterchef.png')}}" style="width:250px;height:150px;margin-left:50px">
+            <img src="{{url('/images/logo/yellowfit.png')}}" style="width:250px;height:150px;margin-left:100px">
+            <img src="{{url('/images/logo/royco.png')}}" style="width:170px;height:150px;margin-left:100px">
+            <img src="{{url('/images/logo/mangkokku.png')}}" style="width:200px;height:150px;margin-left:100px">
         </div>
     </div>
     <div style="background-color: #C84250;height:1350px">
@@ -33,7 +33,7 @@
             @foreach($food->shuffle()->take(1) as $each_food)
                 <div class="bg-white" style="width:1000px;height:330px;border-radius:10px;">
                     <div class="d-flex">
-                        <img src="{{Storage::url('food/'.$each_food->image)}}" style="width:400px;height:350px;margin-top:-10px;margin-left:-130px;border-radius:50%">
+                        <img src="{{url('/images/food/'.$each_food->image)}}" style="width:400px;height:350px;margin-top:-10px;margin-left:-130px;border-radius:50%">
                         <div style="width:700px;padding:25px">
                             <p style="color:black;font-family:poppins;font-weight:600;font-size:28px;text-align:left">{{$each_food->name}}</p>
                             <p style="font-family: poppins;font-size:20px;text-align:justify">{{$each_food->description}}</p>
@@ -63,7 +63,7 @@
                         <div class="col">
                             <div class="bg-white" style="width:500px;height:200px;border-radius:10px;">
                                 <div class="d-flex">
-                                    <img src="{{Storage::url('food/'.$each_food->image)}}" style="width:250px;height:220px;margin-left:-110px;border-radius:50%">
+                                    <img src="{{url('/images/food/'.$each_food->image)}}" style="width:250px;height:220px;margin-left:-110px;border-radius:50%">
                                     <div class="d-flex" style="width:700px;padding:40px;margin-left:-40px">
                                         <div class="ms-5">
                                             <p style="color:black;font-family:poppins;font-weight:600;font-size:25px;text-align:left;margin-bottom:0px">{{$each_food->name}}</p>
