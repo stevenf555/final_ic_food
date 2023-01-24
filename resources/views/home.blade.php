@@ -1,5 +1,5 @@
 <x-template>
-    <div style="height:1000px;background-size: cover;background-image:url('')">
+    <div style="height:1000px;background-size: cover;background-image:url('{{Storage::url($image)}}')">
         <div style="float: right;margin-top:auto;margin-bottom:auto;margin-right:180px;margin-top:300px">
             <p style="color:white;font-family:poppins;font-weight:bold;font-size:50px">Explore Our</p>
             <p style="color:white;font-family:poppins;font-weight:bold;font-size:50px">Indonesian Recipe</p>
