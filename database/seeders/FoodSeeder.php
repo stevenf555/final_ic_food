@@ -85,7 +85,7 @@ class FoodSeeder extends Seeder
                 'durationCook' => "100",
                 'difficultyCook' => "Hard",
                 'image' => "ayamTaliwang.jpg",
-                'description' => "Ayam Taliwang merupakan makanan khas Lombok, Nusa Tenggara Barat yang berbahan dasar Ayam dengan bumbu cabai merah, bawang merah, bawang putih dan lainnya. Ayam Taliwang biasanya disajikan bersama dengan nasi hangat dan sayur pelengkap seperti plecing kangkung."
+                'description' => "Ayam Taliwang merupakan makanan khas Lombok, Nusa Tenggara Barat yang berbahan dasar Ayam dengan bumbu cabai merah, bawang merah, bawang putih dan lainnya. Ayam Taliwang biasanya disajikan bersama dengan nasi hangat dan sayur pelengkap"
             ],
             [
                 'name' => "Soto Banjar",
@@ -93,7 +93,7 @@ class FoodSeeder extends Seeder
                 'durationCook' => "100",
                 'difficultyCook' => "Medium",
                 'image' => "sotoBanjar.jpg",
-                'description' => "Soto Banjar adalah jenis soto khas Suku Banjar yang berasal dari Kalimantan Selatan. Soto Banjar merupakan soto berkuah bening dengan rempah-rempah seperti pala, kayu manis, cengkeh yang ditaburi suwiran ayam, perkedel kentang dan telur rebus. Uniknya, Soto Banjar dinikmati dengan ketupat sebagai karbohidrat utamanya. "
+                'description' => "Soto Banjar adalah jenis soto khas Suku Banjar yang berasal dari Kalimantan Selatan. Soto Banjar merupakan soto berkuah bening dengan rempah-rempah seperti pala, kayu manis, cengkeh yang ditaburi suwiran ayam, perkedel kentang dan telur rebus "
             ],
             [
                 'name' => "Bubur Manado",

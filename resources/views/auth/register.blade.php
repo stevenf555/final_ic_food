@@ -85,6 +85,7 @@
                             {{ __('Register') }}
                         </button>
                     </div>
+                    <center><p style="font-weight: bold;margin-top:20px">Already have account? <a href="login" style="color:#FF122B;text-decoration:none">Sign In</a></span></p></center>
                 </form>
             </div>
         </div>

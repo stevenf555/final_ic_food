@@ -66,6 +66,7 @@
                     <!-- tambahkan script di bawah ini untuk membuat tombol signin google -->
                     <a class="btn btn-danger" style="background-color: #4285F4" href="/auth/google">Login With Google</a>
                 </div>
+                <center><p style="font-weight: bold;margin-top:20px">Dont't have an account? <a href="register" style="color:#FF122B;text-decoration:none">Register Here</a></span></p></center>
             </form>
         </div>
     </div>
